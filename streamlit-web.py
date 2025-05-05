@@ -12,7 +12,7 @@ loaded_vec = TfidfVectorizer(decode_error="replace", vocabulary=set(pickle.load(
 # st.image('logo.webp', width=200)
 
 st.markdown("""
-Selamat datang di aplikasi prediksi pesan penipuan! Masukkan pesan Anda di bawah untuk mendeteksi apakah pesan tersebut adalah pesan fraud, normal, atau promo.
+Selamat datang di aplikasi prediksi pesan penipuan! Masukkan pesan Anda di bawah untuk mendeteksi apakah pesan tersebut adalah pesan Penipuan, normal, atau promo.
 """)
 
 
@@ -29,7 +29,7 @@ if st.button('Hasil Deteksi'):
     if (predict_fraud == 0):
         fraud_detection = 'PESAN Normal'
     elif (predict_fraud == 1):
-        fraud_detection = 'PESAN Spam'
+        fraud_detection = 'PESAN Penipuan'
     else :
         fraud_detection = 'PESAN Promo'
     
